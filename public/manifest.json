@@ -1,0 +1,30 @@
+{
+  "id": "/",
+  "name": "GENG SHII: Narrative Edition",
+  "short_name": "GENG SHII",
+  "description": "Infiltrate The Skool, expose systemic corruption, and overthrow the administration through stealth, evidence, and sabotage.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "window-controls-overlay"],
+  "orientation": "landscape",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "categories": ["games", "entertainment"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
