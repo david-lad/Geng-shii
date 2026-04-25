@@ -302,14 +302,11 @@
 }
 
 @media (min-width: 761px) {
-  .playfield {
-    position: relative;
-  }
-
   .hud__pause {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: fixed;
+    top: clamp(20px, 4vw, 40px);
+    right: clamp(20px, 4vw, 40px);
+    z-index: 20;
   }
 }
 
