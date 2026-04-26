@@ -15,23 +15,25 @@ export function InventoryOverlay({ items, reportsHidden, onClose }: InventoryOve
 
   return (
     <section className="overlay" aria-label="Inventory stash">
-      <div className="overlay__panel">
-        <p className="overlay__title">=== INVENTORY STASH ===</p>
-        <div className="stash-list">
+      <div className="overlay__panel overlay__panel--inventory">
+        <p className="pause__title">INVENTORY</p>
+        <div className="inventory__list">
           {items.length === 0 ? (
-            <p className="choice">Empty</p>
+            <p className="inventory__item">Empty</p>
           ) : (
             items.map((item, index) => (
-              <p className="choice" key={`${item}-${index}`}>
+              <p className="inventory__item" key={`${item}-${index}`}>
                 <span className="choice__tag">[{index + 1}]</span> {item}
               </p>
             ))
           )}
+          {reportsHidden ? <p className="inventory__item">Lead Box: Redacted Budget Reports</p> : null}
         </div>
-        {reportsHidden ? <p className="overlay__note">Lead Box: Redacted Budget Reports</p> : null}
-        <button className="proceed-button" ref={buttonRef} type="button" onClick={onClose}>
-          [Close]
-        </button>
+        <div className="pause__actions">
+          <button className="pause__action choice--active" ref={buttonRef} type="button" onClick={onClose}>
+            [Close]
+          </button>
+        </div>
       </div>
     </section>
   )

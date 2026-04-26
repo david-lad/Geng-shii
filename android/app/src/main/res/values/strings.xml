@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Geng Shii</string>
+    <string name="title_activity_main">Geng Shii</string>
+    <string name="package_name">com.thekzbn.gengshii</string>
+    <string name="custom_url_scheme">com.thekzbn.gengshii</string>
+</resources>

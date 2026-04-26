@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import { EndScreen } from './components/EndScreen'
+import { HintsScreen } from './components/HintsScreen'
 import { InventoryOverlay } from './components/InventoryOverlay'
 import { LevelResult } from './components/LevelResult'
 import { LevelScene } from './components/LevelScene'
@@ -15,7 +16,7 @@ import {
   type GameState,
 } from './game'
 
-type Phase = 'title' | 'room' | 'message' | 'end'
+type Phase = 'title' | 'hints' | 'room' | 'message' | 'end'
 type ActivePhase = Exclude<Phase, 'title'>
 
 type SaveData = {
@@ -92,7 +93,7 @@ function App() {
     setMessageLines([])
     setShowInventory(false)
     setIsPaused(false)
-    setPhase('room')
+    setPhase('hints')
   }
 
   function continueSavedGame() {
@@ -146,6 +147,10 @@ function App() {
 
   if (phase === 'title') {
     return <TitleScreen hasSavedGame={hasSavedGame} onContinue={continueSavedGame} onEnter={startGame} />
+  }
+
+  if (phase === 'hints') {
+    return <HintsScreen onStart={() => setPhase('room')} />
   }
 
   if (phase === 'end') {

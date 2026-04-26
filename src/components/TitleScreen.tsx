@@ -19,7 +19,7 @@ export function TitleScreen({ hasSavedGame, onContinue, onEnter }: TitleScreenPr
         { label: '[Continue]', onClick: onContinue },
         { label: '[New Game]', onClick: onEnter },
       ]
-    : [{ label: '[Enter]', onClick: onEnter }]
+    : [{ label: '[New Game]', onClick: onEnter }]
 
   useEffect(() => {
     buttonRefs.current[selectedIndex]?.focus({ preventScroll: true })
